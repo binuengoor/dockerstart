@@ -17,7 +17,7 @@ chmod +x installscript.sh
 Run the installer with
 
 ```bash
-./installscript.sh.sh
+./installscript.sh
 ```
 
 
