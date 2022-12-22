@@ -10,6 +10,7 @@ git clone https://github.com/binuengoor/dockerstart.git
 Change the permissions of the .sh file to make it executable with.
 
 ```bash
+cd dockerstart
 chmod +x installscript.sh
 ```
 
