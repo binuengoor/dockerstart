@@ -212,9 +212,11 @@ startInstall()
         ######################################        
         
         if [[ "$OS" == "2" || "$OS" == "3" || "$OS" == "4" ]]; then
-            read -rp "What is the current Docker-Compose version?  if unsure enter: "2.14.2" check here: https://github.com/docker/compose/releases" DCVER
-			sudo curl -SL https://github.com/docker/compose/releases/download/v$DCVER/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
-			sudo chmod +x /usr/local/bin/docker-compose
+            echo "What is the current Docker-Compose version?"
+	    echo "Check here: https://github.com/docker/compose/releases"
+	    read -rp "if unsure, enter '2.14.2' : " DCVER
+		sudo curl -SL https://github.com/docker/compose/releases/download/v$DCVER/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+		sudo chmod +x /usr/local/bin/docker-compose
         fi
 
         ######################################
