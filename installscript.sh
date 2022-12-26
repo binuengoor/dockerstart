@@ -213,7 +213,7 @@ startInstall()
         
         if [[ "$OS" == "2" || "$OS" == "3" || "$OS" == "4" ]]; then
             VERSION=$(curl --silent https://api.github.com/repos/docker/compose/releases/latest | grep -Po '"tag_name": "\K.*\d')
-		    sudo curl -SL https://github.com/docker/compose/releases/download/$VERSION/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+	    sudo curl -SL https://github.com/docker/compose/releases/download/$VERSION/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
             sleep 2
             sudo chmod +x /usr/local/bin/docker-compose
         fi
